@@ -21,3 +21,23 @@
   right: 0;
   z-index: 10;
 }
+
+
+.popup__input_type_error {
+  border-color: red;
+}
+
+.button_disabled {
+  background-color:  rgba(255, 255, 255, 0.15);
+  border: solid;
+  border-width: 0.5px;
+  color: rgba(0, 0, 0, 0.15);
+  cursor: default; /* Убирает указатель "руки" */
+  pointer-events: none; /* Отключает наведение и клики */
+}
+
+.popup__error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
