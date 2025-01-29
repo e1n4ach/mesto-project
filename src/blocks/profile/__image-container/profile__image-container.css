@@ -1,0 +1,28 @@
+.profile__image-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.profile__image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.profile__image-container:hover .profile__image-overlay {
+    opacity: 1;
+}
+
+.profile__edit-icon {
+    width: 26px;
+    height: 26px;
+    
+  }

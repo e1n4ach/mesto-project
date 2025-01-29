@@ -14,11 +14,16 @@
   </header>
   <main class="content">
     <section class="profile page__section">
-      <div class="profile__image" style="background-image: url('<%= require('./images/avatar.jpg') %>');"></div>
+      <div class="profile__image-container">
+        <img class="profile__image" src="" alt="Avatar" />
+        <div class="profile__image-overlay">
+          <img src="<%= require('./images/edit-avatar.png') %>" alt="Изменить аватар" class="profile__edit-icon"/>
+        </div>
+      </div>
       <div class="profile__info">
-        <h1 class="profile__title">Жак-Ив Кусто</h1>
+        <h1 class="profile__title"></h1>
         <button class="profile__edit-button" type="button"></button>
-        <p class="profile__description">Исследователь океана</p>
+        <p class="profile__description"></p>
       </div>
       <button class="profile__add-button" type="button"></button>
     </section>
@@ -89,6 +94,23 @@
       <p class="popup__caption"></p>
     </div>
   </div>
+  <div class="popup popup_type_avatar">
+    <div class="popup__content_content_avatar">
+      <button type="button" class="popup__close"></button>
+      <h3 class="popup__title">Обновить аватар</h3>
+      <form class="popup__form popup__form_avatar" name="avatar-form">
+        <input 
+          type="url" 
+          name="avatar" 
+          class="popup__input" 
+          placeholder="Ссылка на аватар" 
+          required>
+        <button 
+          type="submit" 
+          class="button popup__button" disabled>Сохранить</button>
+      </form>
+    </div>
+  </div>  
 </div>
 
 <template id="card-template">
@@ -98,7 +120,10 @@
     <div class="card__description">
       <h2 class="card__title">
       </h2>
-      <button type="button" class="card__like-button"></button>
+      <div class="card__like-container">
+        <button type="button" class="card__like-button"></button>
+        <span class="card__like-count">0</span>
+      </div>
     </div>
   </li>
 </template>
